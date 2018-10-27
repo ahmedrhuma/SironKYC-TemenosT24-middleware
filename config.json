@@ -1,0 +1,85 @@
+{
+    "riskHalt": 90,
+    "kycWSDL": "",
+	"corebankingWSDL": "",
+    "formId": 1,
+    "schemas": {
+        "0001": "A0001",
+        "global": "GLOBAL"
+    },
+    "customerIdFile": "gwnkunde.txt",
+    "database": {
+        "driver": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+        "connectionString": "jdbc:sqlserver://172.30.1.50:1433;databaseName=AMLDATEN;instanceName=",
+        "user": "AML01",
+        "pass": "siron"
+    },
+    "t24": {
+        "login": [
+			{
+				"url": "http://41.226.250.159:8080/BrowserWeb/servlet/BrowserLoginServlet",
+				"headers": {
+					"Content-Type": "application/x-www-form-urlencoded",
+					"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8"
+				},
+				"contents": {
+					"command": "login",
+					"requestType": "CREATE.SESSION",
+					"signOnName": "INPUTT",
+					"password": "123123"
+				},
+				"type": "POST"
+			}
+		]
+    },
+    "methods": [
+        {
+            "name": "",
+            "type": "POST",
+			"url": "http://41.226.250.159:8080/BrowserWeb/servlet/BrowserServlet",
+			"mapping": "SELECT K.KYC_VORNAME AS 'fieldName%3AGIVEN.NAMES', K.KYC_NACHNAME AS 'fieldName%3AFAMILY.NAME', K.NOM AS 'fieldName%3ANAME.1%3A1', K.KYC_SP_06 AS 'fieldName%3ASHORT.NAME%3A1', K.KUNDNR AS 'fieldName%3AMNEMONIC', 'MALE' AS 'fieldName%3AGENDER', 'MALE' AS 'radio%3AmainTab%3AGENDER', '1' AS 'fieldName%3ALANGUAGE', '1001' AS 'fieldName%3ASECTOR', 'MR' AS 'fieldName%3ATITLE', 'TN' AS 'fieldName%3ANATIONALITY', 'TN' AS 'fieldName%3ARESIDENCE' FROM {CLIENT_SCHEMA}.KYCCUST K WHERE K.KUNDNR='{CUSTOMER}' AND HISTBIS='9999'",
+            "mappingOld": "SELECT K.KYC_VORNAME AS 'fieldName%3AGIVEN.NAMES', K.KYC_NACHNAME AS 'fieldName%3AFAMILY.NAME', CONCAT(K.KYC_VORNAME, ' ', K.KYC_NACHNAME) AS 'fieldName%3ANAME.1%3A1', K.KYC_VORNAME AS 'fieldName%3ASHORT.NAME%3A1', K.KUNDNR AS 'fieldName%3AMNEMONIC', 'MALE' AS 'fieldName%3AGENDER', 'MALE' AS 'radio%3AmainTab%3AGENDER', '1' AS 'fieldName%3ALANGUAGE', '1001' AS 'fieldName%3ASECTOR', 'MR' AS 'fieldName%3ATITLE', 'TN' AS 'fieldName%3ANATIONALITY', 'TN' AS 'fieldName%3ARESIDENCE' FROM {CLIENT_SCHEMA}.KYCCUST K WHERE K.KUNDNR='{CUSTOMER}' AND HISTBIS='9999'",
+            "headers": {
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8"
+            },
+			"contents": {
+				"toggle": "",
+				"ofsMessage": "",
+				"GTSControl": "",
+				"routineName": "",
+				"routineArgs": "",
+				"cfNavOperation": "",
+				"unlock": "",
+				"activeTab": "tab1",
+				"SaveChangesText": "Changes+Not+Saved",
+				"contextenqdisplay": "NO",
+				"RecordDelText": "",
+				"expansionHistory": "",
+				"version": "%2CINPUT",
+				"previousVersion": "",
+				"command": "globusCommand",
+				"requestType": "OFS.APPLICATION",
+				"ofsOperation": "PROCESS",
+				"ofsFunction": "I",
+				"application": "CUSTOMER",
+				"ContractStatus": "CHG",
+				"existRecPaste": "",
+				"decrypt": "",
+				"addGroupTab": "",
+				"deleteGroupTab": "",
+				"expandableTab": "",
+				"tabEnri": "",
+				"product": "ST",
+				"name": "",
+				"operation": "",
+				"windowName": "INPUTTER_CUSTOMER_INPUT_I_F3_1539954239925",
+				"toolbarTarget": "",
+				"overridesAccepted": "",
+				"overridesApproved": "",
+				"overrideUnApproved": "",
+				"focus": "fieldName%3AINDUSTRY"
+			}
+        }
+    ]
+}
