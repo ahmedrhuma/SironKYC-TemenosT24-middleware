@@ -17,69 +17,133 @@
     "t24": {
         "login": [
 			{
-				"url": "http://41.226.250.159:8080/BrowserWeb/servlet/BrowserLoginServlet",
+				"url": "http://41.226.250.159:8080/BrowserWeb/servlet/BrowserServlet",
 				"headers": {
 					"Content-Type": "application/x-www-form-urlencoded",
-					"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8"
+					"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+					"Host": "41.226.250.159:8080",
+					"Cache-Control": "max-age=0",
+					"Origin": "http://41.226.250.159:8080",
+					"Upgrade-Insecure-Requests": "1",
+					"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36",
+					"Referer": "http://41.226.250.159:8080/BrowserWeb/servlet/BrowserServlet",
+					"Accept-Encoding": "gzip, deflate",
+					"Accept-Language": "en-US,en;q=0.9,ar;q=0.8",
+					"Connection": "close"
 				},
 				"contents": {
-					"command": "login",
-					"requestType": "CREATE.SESSION",
 					"signOnName": "INPUTT",
 					"password": "123123"
 				},
+				"type": "GETFORM"
+			},
+			{
+				"url": "http://41.226.250.159:8080/BrowserWeb/servlet/BrowserLoginServlet",
+				"headers": {
+					"Content-Type": "application/x-www-form-urlencoded",
+					"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+					"Host": "41.226.250.159:8080",
+					"Cache-Control": "max-age=0",
+					"Origin": "http://41.226.250.159:8080",
+					"Upgrade-Insecure-Requests": "1",
+					"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36",
+					"Referer": "http://41.226.250.159:8080/BrowserWeb/servlet/BrowserServlet",
+					"Accept-Encoding": "gzip, deflate",
+					"Accept-Language": "en-US,en;q=0.9,ar;q=0.8",
+					"Connection": "close"
+				},
 				"type": "POST"
+			},
+			{
+				"url": "http://41.226.250.159:8080/BrowserWeb/jsps/blankPage.jsp",
+				"headers": {
+					"Content-Type": "application/x-www-form-urlencoded",
+					"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+					"Host": "41.226.250.159:8080",
+					"Cache-Control": "max-age=0",
+					"Origin": "http://41.226.250.159:8080",
+					"Upgrade-Insecure-Requests": "1",
+					"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36",
+					"Referer": "http://41.226.250.159:8080/BrowserWeb/servlet/BrowserServlet",
+					"Accept-Encoding": "gzip, deflate",
+					"Accept-Language": "en-US,en;q=0.9,ar;q=0.8",
+					"Connection": "close"
+				},
+				"contents": {},
+				"type": "GETFORM"
+			},
+			{
+				"type": "POST",
+				"url": "http://41.226.250.159:8080/BrowserWeb/servlet/BrowserLoginServlet",
+				"headers": {
+					"Content-Type": "application/x-www-form-urlencoded",
+					"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+					"Host": "41.226.250.159:8080",
+					"Cache-Control": "max-age=0",
+					"Origin": "http://41.226.250.159:8080",
+					"Upgrade-Insecure-Requests": "1",
+					"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36",
+					"Referer": "http://41.226.250.159:8080/BrowserWeb/jsps/blankPage.jsp?",
+					"Accept-Encoding": "gzip, deflate",
+					"Accept-Language": "en-US,en;q=0.9,ar;q=0.8",
+					"Connection": "close"
+				},
+				"contents": {}
+			}
+		],
+		"methods": [
+			{
+				"name": "",
+				"type": "POST",
+				"url": "http://41.226.250.159:8080/BrowserWeb/servlet/BrowserServlet",
+				"GET": "requestType=UTILITY.ROUTINE&drilltarget=&routineName=OS.NEW.DEAL&routineArgs=CUSTOMER%2CINPUT+I+F3&application=CUSTOMER&ofsOperation=&ofsFunction=I&ofsMessage=&version=%2CINPUT&transactionId=F3&command=globusCommand&operation=&windowName=INPUTTER_CUSTOMER_INPUT_I_F3_1540740885837&apiArgument=&name=&enqname=MO.PERSONAL.CATALOG-PRODUCTS&enqaction=SELECTION&dropfield=&previousEnqs=&previousEnqTitles=&clientStyleSheet=&unlock=&allowResize=YES&companyId=GB0010001&company=Model+Bank+R16&user=INPUTTER&userRole=&transSign=&skin=default&today=22-APR-2016&release=R16&compScreen=COMPOSITE.SCREEN_INPUTTER_320802912808&reqTabid=&compTargets=menu_menu320802912807%7C&attribframes=&EnqParentWindow=menu320802912807&timing=1155-47-16-1092-0&pwprocessid=&language=GB&languages=GB%2CFR%2CDE%2CES&savechanges=YES&staticId=&lockDateTime=&popupDropDown=true&allowcalendar=&allowdropdowns=&allowcontext=&nextStage=&maximize=&showStatusInfo=true&languageUndefined=&expandMultiString=&deleteMultiString=&expandSubString=&clientExpansion=true&showReleaseInfo=NO&singleLoadingIcon=no&WS_parentWindow=&WS_parent=&WS_parentFormId=&WS_dropfield=&WS_doResize=&WS_initState=CUSTOMER%2CINPUT+I+F3&WS_PauseTime=&WS_multiPane=false&WS_showTabs=false&WS_replaceAll=&WS_parentComposite=INPUTTER_COS_CUSTOMER_NAU_AMEND_1540740849624&WS_delMsgDisplayed=&enableTabIndex=NO&tabIndexForInfoIcon=NO&tabIndexForDropFields=NO&tabIndexForExpansionIcons=NO",
+				"mapping": "SELECT    K.KYC_VORNAME AS 'fieldName%3AGIVEN.NAMES',    K.KYC_NACHNAME AS 'fieldName%3AFAMILY.NAME',    CONCAT(K.KYC_VORNAME, ' ', K.KYC_NACHNAME) AS 'fieldName%3ANAME.1%3A1',    K.KYC_VORNAME AS 'fieldName%3ASHORT.NAME%3A1',    K.KUNDNR AS 'fieldName%3AMNEMONIC',    'MALE' AS 'fieldName%3AGENDER',    'MALE' AS 'radio%3AmainTab%3AGENDER',    '1' AS 'fieldName%3ALANGUAGE',    '1001' AS 'fieldName%3ASECTOR',    'MR' AS 'fieldName%3ATITLE',    'TN' AS 'fieldName%3ANATIONALITY',    'TN' AS 'fieldName%3ARESIDENCE'FROM    {CLIENT}.KYCCUST K WHERE     K.KUNDNR='{CUSTOMER}' AND    HISTBIS='9999'",
+				"mappingOld": "SELECT K.KYC_VORNAME AS 'fieldName%3AGIVEN.NAMES', K.KYC_NACHNAME AS 'fieldName%3AFAMILY.NAME', CONCAT(K.KYC_VORNAME, ' ', K.KYC_NACHNAME) AS 'fieldName%3ANAME.1%3A1', K.KYC_VORNAME AS 'fieldName%3ASHORT.NAME%3A1', K.KUNDNR AS 'fieldName%3AMNEMONIC', 'MALE' AS 'fieldName%3AGENDER', 'MALE' AS 'radio%3AmainTab%3AGENDER', '1' AS 'fieldName%3ALANGUAGE', '1001' AS 'fieldName%3ASECTOR', 'MR' AS 'fieldName%3ATITLE', 'TN' AS 'fieldName%3ANATIONALITY', 'TN' AS 'fieldName%3ARESIDENCE' FROM {CLIENT_SCHEMA}.KYCCUST K WHERE K.KUNDNR='{CUSTOMER}' AND HISTBIS='9999'",
+				"headers": {
+					"Content-Type": "application/x-www-form-urlencoded",
+					"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+					"Content-Length": "1418",
+					"Origin": "http://41.226.250.159:8080",
+					"Referer": "http://41.226.250.159:8080/BrowserWeb/servlet/BrowserServlet"
+				},
+				"contents": {
+					"toggle": "",
+					"ofsMessage": "",
+					"GTSControl": "",
+					"routineName": "",
+					"routineArgs": "",
+					"cfNavOperation": "",
+					"unlock": "",
+					"activeTab": "tab1",
+					"SaveChangesText": "Changes+Not+Saved",
+					"contextenqdisplay": "NO",
+					"RecordDelText": "",
+					"expansionHistory": "",
+					"version": "%2CINPUT",
+					"previousVersion": "",
+					"command": "globusCommand",
+					"requestType": "OFS.APPLICATION",
+					"ofsOperation": "PROCESS",
+					"ofsFunction": "I",
+					"application": "CUSTOMER",
+					"ContractStatus": "CHG",
+					"existRecPaste": "",
+					"decrypt": "",
+					"addGroupTab": "",
+					"deleteGroupTab": "",
+					"expandableTab": "",
+					"tabEnri": "",
+					"product": "ST",
+					"name": "",
+					"operation": "",
+					"windowName": "INPUTTER_CUSTOMER_INPUT_I_F3_1539954239925",
+					"toolbarTarget": "",
+					"overridesAccepted": "",
+					"overridesApproved": "",
+					"overrideUnApproved": "",
+					"focus": "fieldName%3AINDUSTRY"
+				}
 			}
 		]
-    },
-    "methods": [
-        {
-            "name": "",
-            "type": "POST",
-			"url": "http://41.226.250.159:8080/BrowserWeb/servlet/BrowserServlet",
-			"mapping": "SELECT K.KYC_VORNAME AS 'fieldName%3AGIVEN.NAMES', K.KYC_NACHNAME AS 'fieldName%3AFAMILY.NAME', K.NOM AS 'fieldName%3ANAME.1%3A1', K.KYC_SP_06 AS 'fieldName%3ASHORT.NAME%3A1', K.KUNDNR AS 'fieldName%3AMNEMONIC', 'MALE' AS 'fieldName%3AGENDER', 'MALE' AS 'radio%3AmainTab%3AGENDER', '1' AS 'fieldName%3ALANGUAGE', '1001' AS 'fieldName%3ASECTOR', 'MR' AS 'fieldName%3ATITLE', 'TN' AS 'fieldName%3ANATIONALITY', 'TN' AS 'fieldName%3ARESIDENCE' FROM {CLIENT_SCHEMA}.KYCCUST K WHERE K.KUNDNR='{CUSTOMER}' AND HISTBIS='9999'",
-            "mappingOld": "SELECT K.KYC_VORNAME AS 'fieldName%3AGIVEN.NAMES', K.KYC_NACHNAME AS 'fieldName%3AFAMILY.NAME', CONCAT(K.KYC_VORNAME, ' ', K.KYC_NACHNAME) AS 'fieldName%3ANAME.1%3A1', K.KYC_VORNAME AS 'fieldName%3ASHORT.NAME%3A1', K.KUNDNR AS 'fieldName%3AMNEMONIC', 'MALE' AS 'fieldName%3AGENDER', 'MALE' AS 'radio%3AmainTab%3AGENDER', '1' AS 'fieldName%3ALANGUAGE', '1001' AS 'fieldName%3ASECTOR', 'MR' AS 'fieldName%3ATITLE', 'TN' AS 'fieldName%3ANATIONALITY', 'TN' AS 'fieldName%3ARESIDENCE' FROM {CLIENT_SCHEMA}.KYCCUST K WHERE K.KUNDNR='{CUSTOMER}' AND HISTBIS='9999'",
-            "headers": {
-                "Content-Type": "application/x-www-form-urlencoded",
-                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8"
-            },
-			"contents": {
-				"toggle": "",
-				"ofsMessage": "",
-				"GTSControl": "",
-				"routineName": "",
-				"routineArgs": "",
-				"cfNavOperation": "",
-				"unlock": "",
-				"activeTab": "tab1",
-				"SaveChangesText": "Changes+Not+Saved",
-				"contextenqdisplay": "NO",
-				"RecordDelText": "",
-				"expansionHistory": "",
-				"version": "%2CINPUT",
-				"previousVersion": "",
-				"command": "globusCommand",
-				"requestType": "OFS.APPLICATION",
-				"ofsOperation": "PROCESS",
-				"ofsFunction": "I",
-				"application": "CUSTOMER",
-				"ContractStatus": "CHG",
-				"existRecPaste": "",
-				"decrypt": "",
-				"addGroupTab": "",
-				"deleteGroupTab": "",
-				"expandableTab": "",
-				"tabEnri": "",
-				"product": "ST",
-				"name": "",
-				"operation": "",
-				"windowName": "INPUTTER_CUSTOMER_INPUT_I_F3_1539954239925",
-				"toolbarTarget": "",
-				"overridesAccepted": "",
-				"overridesApproved": "",
-				"overrideUnApproved": "",
-				"focus": "fieldName%3AINDUSTRY"
-			}
-        }
-    ]
+    }
 }

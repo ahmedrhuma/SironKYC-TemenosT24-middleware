@@ -1,0 +1,172 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:63), pid=128300, tid=129948
+#
+# JRE version:  (10.0.2+13) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (10.0.2+13, mixed mode, aot, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: middleware.jar F:\ 0001 KYCAPI_000000048 F:\Eclipse\KYCAdvanced\config.json
+
+Host: Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz, 8 cores, 19G,  Windows 10 , 64 bit Build 17134 (10.0.17134.1)
+Time: Sat Oct 27 18:46:42 2018 Romance Daylight Time elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001ed1e174800):  JavaThread "Unknown thread" [_thread_in_vm, id=129948, stack(0x0000008cbb000000,0x0000008cbb100000)]
+
+Stack: [0x0000008cbb000000,0x0000008cbb100000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x5a01a9]
+V  [jvm.dll+0x6bcf31]
+V  [jvm.dll+0x6be126]
+V  [jvm.dll+0x6be7b3]
+V  [jvm.dll+0x234978]
+V  [jvm.dll+0x105556]
+V  [jvm.dll+0x2cb95c]
+V  [jvm.dll+0x2c5734]
+V  [jvm.dll+0x69d1db]
+V  [jvm.dll+0x69e9fc]
+V  [jvm.dll+0x3519e9]
+V  [jvm.dll+0x6856a2]
+V  [jvm.dll+0x3ba0c3]
+V  [jvm.dll+0x3bc261]
+C  [java.exe+0x3531]
+C  [java.exe+0xe1af]
+C  [java.exe+0xe356]
+C  [KERNEL32.DLL+0x13034]
+C  [ntdll.dll+0x71461]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001ed1c06fc10, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001ed1e18f000 GCTaskThread "GC Thread#0" [stack: 0x0000008cbb100000,0x0000008cbb200000] [id=128664]
+  0x000001ed1e191800 GCTaskThread "GC Thread#1" [stack: 0x0000008cbb200000,0x0000008cbb300000] [id=129312]
+  0x000001ed1e193800 GCTaskThread "GC Thread#2" [stack: 0x0000008cbb300000,0x0000008cbb400000] [id=129092]
+  0x000001ed1e195000 GCTaskThread "GC Thread#3" [stack: 0x0000008cbb400000,0x0000008cbb500000] [id=129276]
+  0x000001ed1e198000 GCTaskThread "GC Thread#4" [stack: 0x0000008cbb500000,0x0000008cbb600000] [id=129792]
+  0x000001ed1e19a800 GCTaskThread "GC Thread#5" [stack: 0x0000008cbb600000,0x0000008cbb700000] [id=129332]
+  0x000001ed1e1a1800 GCTaskThread "GC Thread#6" [stack: 0x0000008cbb700000,0x0000008cbb800000] [id=98616]
+  0x000001ed1e1a0000 GCTaskThread "GC Thread#7" [stack: 0x0000008cbb800000,0x0000008cbb900000] [id=125872]
+
+[error occurred during error reporting (printing all threads), id 0xe0000001]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001ed1e174520] Heap_lock - owner thread: 0x000001ed1e174800
+
+Heap address: 0x0000000681e00000, size: 5090 MB, Compressed Oops mode: Non-zero based: 0x0000000681e00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff756980000 - 0x00007ff7569be000 	C:\Program Files (x86)\Common Files\Oracle\Java\javapath\java.exe
+0x00007ffa2baa0000 - 0x00007ffa2bc81000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffa29d20000 - 0x00007ffa29dd2000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffa282e0000 - 0x00007ffa28553000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffa29ea0000 - 0x00007ffa29f41000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffa29e00000 - 0x00007ffa29e9e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffa29a60000 - 0x00007ffa29abb000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffa2a040000 - 0x00007ffa2a164000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffa2a4a0000 - 0x00007ffa2a630000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffa28f10000 - 0x00007ffa28f30000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffa28f50000 - 0x00007ffa28f78000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffa28560000 - 0x00007ffa286f2000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffa280c0000 - 0x00007ffa2815f000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffa28160000 - 0x00007ffa2825a000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffa105f0000 - 0x00007ffa10859000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.345_none_fb429a5930656358\COMCTL32.dll
+0x00007ffa2a170000 - 0x00007ffa2a493000 	C:\WINDOWS\System32\combase.dll
+0x00007ffa26610000 - 0x00007ffa2661a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffa28260000 - 0x00007ffa282da000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffa298c0000 - 0x00007ffa298ed000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffa0a8e0000 - 0x00007ffa0a9cf000 	C:\Program Files\Java\jre-10.0.2\bin\msvcr120.dll
+0x00007ffa08d60000 - 0x00007ffa08e06000 	C:\Program Files\Java\jre-10.0.2\bin\msvcp120.dll
+0x00000000744d0000 - 0x0000000074f40000 	C:\Program Files\Java\jre-10.0.2\bin\server\jvm.dll
+0x00007ffa28f30000 - 0x00007ffa28f38000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffa20200000 - 0x00007ffa20209000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffa248b0000 - 0x00007ffa248d3000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffa299f0000 - 0x00007ffa29a5c000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffa23fa0000 - 0x00007ffa23fca000 	C:\WINDOWS\SYSTEM32\winmmbase.dll
+0x00007ffa28700000 - 0x00007ffa28749000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x00007ffa253d0000 - 0x00007ffa253df000 	C:\Program Files\Java\jre-10.0.2\bin\verify.dll
+0x00007ffa268e0000 - 0x00007ffa26aa9000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffa096c0000 - 0x00007ffa096e9000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffa17bd0000 - 0x00007ffa17bf7000 	C:\Program Files\Java\jre-10.0.2\bin\java.dll
+0x00007ffa20af0000 - 0x00007ffa20b06000 	C:\Program Files\Java\jre-10.0.2\bin\zip.dll
+0x00007ffa253c0000 - 0x00007ffa253ca000 	C:\Program Files\Java\jre-10.0.2\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.345_none_fb429a5930656358;C:\Program Files\Java\jre-10.0.2\bin;C:\Program Files\Java\jre-10.0.2\bin\server
+
+VM Arguments:
+java_command: middleware.jar F:\ 0001 KYCAPI_000000048 F:\Eclipse\KYCAdvanced\config.json
+java_class_path (initial): middleware.jar
+Launcher Type: SUN_STANDARD
+
+Logging:
+Log output configuration:
+#0: stdout all=warning uptime,level,tags
+#1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_181
+PATH=C:\Users\lenovo\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\lenovo\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\WINDOWS\System32\OpenSSH;C:\composer;C:\Users\lenovo\AppData\Local\Microsoft\WindowsApps;C:\Users\lenovo\AppData\Roaming\Composer\vendor\bin;C:\Program Files\Microsoft VS Code\bin;C:\Users\lenovo\AppData\Roaming\npm;C:\Program Files\nodejs;C:\Program Files\MongoDB\Server\3.6\bin;C:\oracle\instantclient_12_2;C:\Users\lenovo\AppData\Roaming\Dashlane\4.6.6.23032\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\lenovo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\php;C:\Users\lenovo\AppData\Roaming\Dashlane\6.1841.0.13779\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;C:\Users\lenovo\AppData\Roaming\Dashlane\6.1841.0.13779\ucrt;C:\Users\lenovo\AppData\Roaming\Dashlane\6.1841.0.13779\bin\Qt;C:\Users\lenovo\AppData\Roaming\Dashlane\6.1841.0.13779\ucrt;C:\Users\lenovo\AppData\Roaming\Dashlane\6.1841.0.13779\bin\Ssl;C:\Program Files\apache-maven-3.5.4\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+USERNAME=lenovo
+SHELL=C:\Program Files\Git\usr\bin\bash.exe
+DISPLAY=needs-to-be-defined
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 17134 (10.0.17134.1)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 142 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, physical 20843148k(6343752k free), swap 41609868k(5668k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (10.0.2+13) for windows-amd64 JRE (10.0.2+13), built on Jun 28 2018 01:57:56 by "mach5one" with MS VC++ 12.0 (VS2013)
+
+END.

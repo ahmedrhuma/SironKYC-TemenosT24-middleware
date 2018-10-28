@@ -61,6 +61,7 @@ public class Database {
 		try {
 			stmt = this.connection.createStatement();
 	        ResultSet rs = stmt.executeQuery(this.parseSQL(sql));
+	        System.out.println("Query: " + this.parseSQL(sql));
 	        JSONObject values = new JSONObject();
 	        while (rs.next()) {
 	        	for (int i = 1; i <= rs.getMetaData().getColumnCount(); i++) {
@@ -87,7 +88,7 @@ public class Database {
 	String parseSQL(String sql){
 		Config config = Config.getInstance();
 		if (new String(sql).isEmpty() || config.getCustomer() == null) return sql;
-		sql = sql.replace("{CLIENT}", config.getClient());
+		sql = sql.replace("{CLIENT}", config.getClientSchema());
 		sql = sql.replace("{FORMID}", config.getCustomer().getFormId() + "");
 		sql = sql.replace("{CLIENT_SCHEMA}", config.getCustomer().getClientSchema());
 		sql = sql.replace("{GLOBAL_SCHEMA}", config.getCustomer().getGlobalSchema());

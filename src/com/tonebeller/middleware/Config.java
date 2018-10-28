@@ -89,6 +89,16 @@ class Config {
 		return this.CLIENT;
 	}
 	
+	String getClientSchema(){
+		try {
+			return this.json.getJSONObject("schemas").getString(this.CLIENT);
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return "";
+		}
+	}
+	
 	// local getter
 	String getWorkingDirectory(){
 		return this.WORK_DIRECTORY;
