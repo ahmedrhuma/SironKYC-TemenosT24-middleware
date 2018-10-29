@@ -3,8 +3,12 @@ package com.tonebeller.middleware;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.file.Files;
 import java.nio.file.InvalidPathException;
+import java.nio.file.Paths;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -41,6 +45,8 @@ class Config {
 		SUB_FOLDER,
 		WORK_DIRECTORY;
 	private int RISK_HALT = 0;
+	private String newId;
+	private static int lastId;
 	
 	/**
 	 * private constructor
@@ -52,6 +58,7 @@ class Config {
 		if (this.KYC_ROOT != null){
 			try {
 				this.loadKycProperties();
+				this.loadFile();
 			} catch (InvalidPathException e) {
 				System.out.println(e.getMessage());
 			} catch (IOException e) {
@@ -60,6 +67,70 @@ class Config {
 			
 		}
 	}
+	
+	Config loadFile(){
+		File f = new File("temenosLastId.middleware");
+		if(f.exists() && !f.isDirectory()) { 
+			byte[] encoded;
+			try {
+				encoded = Files.readAllBytes(Paths.get("temenosLastId.middleware"));
+				Config.lastId = Integer.parseInt((new String(encoded, "utf-8")));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		else {
+			try {
+				Config.lastId = this.json.getInt("lastId");
+				this.createFile();
+			} catch (JSONException | IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return this;
+	}
+	
+	public int getLastId(){
+		return Config.lastId;
+	}
+	
+	Config createFile() throws IOException{
+		try {
+			PrintWriter out = new PrintWriter("temenosLastId.middleware");
+			out.println(this.json.getInt("lastId"));
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return this;
+	}
+	
+	Config incrementId(){
+		File myFoo = new File("temenosLastId.middleware");
+		FileWriter fooWriter;
+		try {
+			this.lastId = this.lastId + 1;
+			fooWriter = new FileWriter(myFoo, false);
+			fooWriter.write(this.lastId);
+			fooWriter.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} // true to append
+		return this; // false to overwrite.
+	}
+	
+	Config setNewId(String string) {
+		this.newId = string;
+		return this;
+	}
+	
+	String getNewId(){
+		return this.newId;
+	}
+	
 	
 	// local setter
 	Config setClient(String val){
