@@ -21,6 +21,13 @@ public class Middleware {
 					+ Middleware.class.getName());
 			Customer customer = new Customer(config);
 			config.setCustomer(customer);
+			if (config.json.getBoolean("restrictResult")){
+				System.out.println(Integer.parseInt(customer.getRisk()));
+				if (Integer.parseInt(customer.getRisk()) == 0 || Integer.parseInt(customer.getRisk()) > config.json.getInt("restrictValue")){
+					System.out.println("\n\n==== STOPPED MIDDLEWARE DUE TO NO RISK NOT FOUND OR HIGHER THAN ALLOWED===\n\n");
+					System.exit(-1);
+				}
+			}
 			new Webservice();
 		}
 		catch(Exception e){

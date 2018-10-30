@@ -84,13 +84,13 @@ private String location;
 	try {
 		this.cookies = null;
 		System.out.println("\n\n ==== KYC RENAME === \n\n");
-		System.out.println(this.responseBody);
 		Document document = Jsoup.parse(this.responseBody);
 		Elements td = document.getElementsByClass("message");
 		System.out.println("\n\n === " + td.text());
 		Pattern p = Pattern.compile("(Txn Complete: )([0-9]+)([0-9A-Za-z :,]+)");
 		Matcher m = p.matcher(td.text());
 		if (m.find()) {
+			System.out.println("\nRENAME TO: " + m.find());
 	        String kycWsUser = this.config.json.getJSONObject("kyc").getString("username");
 			kycWsPass = this.config.json.getJSONObject("kyc").getString("password");
 			this.config.setNewId(m.group(2));
@@ -107,7 +107,7 @@ private String location;
 			req.put("contents", new JSONObject());
 			req.put("url", this.config.json.getJSONObject("kyc").getString("url"));
 			this.sendPost(req, request);
-	    }
+	    } else System.out.println("Failed Renaming, no new ID");
 	} catch (Exception e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();

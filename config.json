@@ -153,5 +153,7 @@
 		"password": "gwg",
 		"host": "172.30.1.50:8080",
 		"url": "http://172.30.1.50:8080/axis2/services/KYCService01.KYCService01HttpSoap11Endpoint"
-	}
+	},
+	"restrictResult": true,
+	"restrictValue": 50
 }
